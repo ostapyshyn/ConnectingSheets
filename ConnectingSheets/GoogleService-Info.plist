@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>826077070711-ch56cb63v9kt2r24t5up8crrgdj1g2oj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.826077070711-ch56cb63v9kt2r24t5up8crrgdj1g2oj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDn-h_7XJAv91ml2326008g-Jyr9ihu3wo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>826077070711</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Ostapyshyn.ConnectingSheetsTest</string>
+	<key>PROJECT_ID</key>
+	<string>connectingsheets-3c490</string>
+	<key>STORAGE_BUCKET</key>
+	<string>connectingsheets-3c490.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:826077070711:ios:d8f761e4448f742d09cd72</string>
+	<key>DATABASE_URL</key>
+	<string>https://connectingsheets-3c490.firebaseio.com</string>
+</dict>
+</plist>
