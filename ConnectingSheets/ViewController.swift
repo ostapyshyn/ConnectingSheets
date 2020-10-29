@@ -14,6 +14,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     // resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeSheetsSpreadsheetsReadonly]
     private let service = GTLRSheetsService()
+    var participants: [String] = []
     
     let signInButton = GIDSignInButton()
     let output = UITextView()
@@ -60,14 +61,15 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     // Display (in the UITextView) the names and majors of students in a sample
     // spreadsheet:
-    // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+    //     https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+    // new https://docs.google.com/spreadsheets/d/17uwByt-sVkLFPGAckxdbNwnUIoDwCkVFw7HQvsIRH-4/edit
     
     
     func listMajors() {
         
         output.text = "Getting sheet data..."
-        let spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
-        let range = "Class Data!A2:E"
+        let spreadsheetId = "17uwByt-sVkLFPGAckxdbNwnUIoDwCkVFw7HQvsIRH-4"
+        let range = "Аркуш1!A1:A1000"
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet
             .query(withSpreadsheetId: spreadsheetId, range:range)
         service.executeQuery(query, delegate: self,
@@ -94,13 +96,17 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             return
         }
         
-        majorsString += "Name, Major:\n"
+        //majorsString += "List of participants\n"
         
         for row in rows {
             let name = row[0]
-            let major = row[4]
-            majorsString += "\(name), \(major)\n"
+            //let major = row[4]
+            majorsString += "\(name)\n" // \(major)"
+           
+            participants.append("\(name)")
         }
+        print(participants.count)
+        print(participants)
         
         output.text = majorsString
     }
